@@ -1,0 +1,27 @@
+app13 
+NestedBeans
+class Course{
+String cid;
+String cname; 
+}
+class Student{
+ String id;
+String name;
+String adr;
+Course crs;
+}
+
+configuration
+<Beans>
+	<bean id ="std" class="----">
+	<property name="id" value="101"/>
+	<property name="name" value="Ram"/>
+	<property name="adr" value="Ayodhya"/>
+	<property name="crs">
+		<bean id="course" class="--------">
+			<property name="cid" value="421"/>
+			<property name="cname" value="Java"/>
+		</bean>
+</property>
+</Beans>
+id of inner Bean is optional
