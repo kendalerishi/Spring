@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+       <bean id="employeeService" class="com.app15.beans.EmployeeService" init-method="init">
+       		<property name="driver_Class" value="com.mysql.jdbc.Driver"/>
+       		<property name="driver_URL" value="jdbc:mysql://localhost/rr"/>
+       		<property name="dB_UserName" value="root"/>
+       		<property name="dB_Pass" value="root"/>
+       </bean>  
+</beans>

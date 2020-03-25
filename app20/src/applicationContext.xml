@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="accBean" class="com.app20.beans.Account">
+		<property name="accNo" value="001"/>
+		<property name="accName" value="Ram"/>
+		<property name="accType" value="Savings"/>
+		<property name="balance" value="50000"/>
+	</bean>
+
+	<bean id="addrBean" class="com.app20.beans.Address">
+		<property name="hno" value="101"/>
+		<property name="street" value="Vimannagar"/>
+		<property name="city" value="Pune"/>
+		<property name="state" value="Maharashtra"/>
+		<property name="country" value="India"/>
+	</bean>
+	
+	<bean id="empBean" class="com.app20.beans.Employee" autowire="constructor">
+		<constructor-arg ref="accBean"/>
+		<constructor-arg ref="addrBean"/>
+	</bean>
+	
+	<!-- BY TYPE For this we need to have only one Bean config for injected Beans-->
+<!-- 	
+		<bean id="accBean" class="com.app20.beans.Account">
+		<property name="accNo" value="001"/>
+		<property name="accName" value="Ram"/>
+		<property name="accType" value="Savings"/>
+		<property name="balance" value="50000"/>
+	</bean>
+
+	<bean id="addrBean" class="com.app20.beans.Address">
+		<property name="hno" value="101"/>
+		<property name="street" value="Vimannagar"/>
+		<property name="city" value="Pune"/>
+		<property name="state" value="Maharashtra"/>
+		<property name="country" value="India"/>
+	</bean>
+	
+	<bean id="empBean" class="com.app20.beans.Employee" autowire="byType">
+		<property name="eid" value="E-36"/>
+		<property name="ename" value="Sita"/>
+		<property name="esal" value="5000"/>
+	</bean>
+	 -->
+	
+	<!-- BY NAME For this we need to change id  of Account to acc same as property. Same for Address-->
+	<!-- 
+	<bean id="acc" class="com.app20.beans.Account">
+		<property name="accNo" value="001"/>
+		<property name="accName" value="Ram"/>
+		<property name="accType" value="Savings"/>
+		<property name="balance" value="50000"/>
+	</bean>
+	<bean id="addr" class="com.app20.beans.Address">
+		<property name="hno" value="101"/>
+		<property name="street" value="Vimannagar"/>
+		<property name="city" value="Pune"/>
+		<property name="state" value="Maharashtra"/>
+		<property name="country" value="India"/>
+	</bean>
+	<bean id="empBean" class="com.app20.beans.Employee" autowire="byName">
+		<property name="eid" value="E-36"/>
+		<property name="ename" value="Sita"/>
+		<property name="esal" value="5000"/>
+		<property name="acc" ref="accBean"/>
+		<property name="addr" ref="addrBean"/>
+	</bean>
+	 -->
+	<!-- NO AUTOWIRE -->
+	<!-- 
+	<bean id="empBean" class="com.app20.beans.Employee" autowire="no">
+		<property name="eid" value="E-36"/>
+		<property name="ename" value="Sita"/>
+		<property name="esal" value="5000"/>
+		<property name="acc" ref="accBean"/>
+		<property name="addr" ref="addrBean"/>
+	</bean>
+	 -->
+	
+</beans>
