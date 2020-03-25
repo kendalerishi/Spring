@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+    <bean id="tempAdd" class="com.app16.beans.Address">
+       		<constructor-arg value="420"/>
+       		<constructor-arg value="Vimannagar"/>
+       		<constructor-arg value="Pune"/>
+       		<constructor-arg value="Maharashtra"/>
+       </bean> 
+       <bean id="permAdd" class="com.app16.beans.Address">
+       		<constructor-arg value="421"/>
+       		<constructor-arg value="Amberpeth"/>
+       		<constructor-arg value="Hyderabad"/>
+       		<constructor-arg value="Telangana"/>
+       </bean>  
+       
+       <bean id="student" class="com.app16.beans.Student">
+       		<property name="sid" value="101"/>
+       		<property name="sname" value="Shyam"/>
+       		<property name="std_Temp_Addr">
+       		<ref bean="tempAdd"/>
+       		</property>
+       		<property name="std_Perm_Addr" ref="permAdd"/>    		
+       		<property name="squal">
+       			<list>
+       				<value>BSc</value>
+       				<value>MSc</value>
+       				<value>PhD</value>
+       			</list>
+       		</property>
+			<property name="scourses">
+       			<set>
+       				<value>C</value>
+       				<value>C++</value>
+       				<value>Java</value>
+       			</set>
+       		</property>
+       		<property name="scourse_And_Faculty">
+       			<map>
+       				<entry key="C" value="Ram"/>
+       				<entry key="C++" value="Sita"/>
+       				<entry key="Java" value="Geeta"/>
+       			</map>	
+       		</property>
+       		
+       		<property name="scourse_And_Cost">
+       			<props>
+       					<prop key="C">5000</prop>
+       					<prop key="C++">3000</prop>
+       					<prop key="Java">2000</prop>
+       			</props>      		
+       		</property>
+    </bean> 
+</beans>

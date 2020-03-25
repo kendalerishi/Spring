@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+       <bean id="employee" class="com.app14.beans.Employee">
+       <constructor-arg value="101"/>
+       <constructor-arg value="Ram"/>
+       <constructor-arg value="25000"/>
+       <constructor-arg value="Pune"/>
+       </bean>  
+</beans>

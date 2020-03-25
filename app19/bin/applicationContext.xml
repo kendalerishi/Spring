@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="accountBean" class="com.app19.beans.Account" c:accNo="101" c:accName="Ram" c:accType="Savings" c:balance="25000"/>
+	<bean id="employeeBean" class="com.app19.beans.Employee" c:eid="e-101" c:ename="Ram" c:esal="5000" c:eaddr="Pune" c:acc-ref="accountBean"/>
+	
+	<bean id="courseBean" class="com.app19.beans.Course" p:cid="C-101" p:cname="OCPJP" p:ccost="12000"/>
+	<bean id="studentBean" class="com.app19.beans.Student" p:sid="S-101" p:sname="Sita" p:saddr="Hyderabad" p:course-ref="courseBean"/>
+	
+</beans>
