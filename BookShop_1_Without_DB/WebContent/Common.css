@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+
+body {
+  background-color: lightyellow;
+  /* background:url("https://previews.123rf.com/images/apostrophe/apostrophe1507/apostrophe150700082/43272894-pastel-blue-background-with-faint-texture.jpg");
+ */
+ }
+h1 {
+  color: blue;
+  margin-left: 20px;
+}
+p1 {
+  color: brown;
+  margin-left: 20px;
+}

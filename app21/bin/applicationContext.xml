@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+	
+	<bean id="courseBean" class="com.app21.beans.Course">
+		<property name="cid" value="001"/>
+		<property name="cname" value="Core Java"/>
+		<property name="ccost" value="1000"/>
+	</bean>
+	
+	<!-- <bean id="courseBean1" class="com.app21.beans.Course">
+		<property name="cid" value="002"/>
+		<property name="cname" value="Adv Java"/>
+		<property name="ccost" value="2000"/>
+	</bean> -->
+	
+	<bean id="studentBean" class="com.app21.beans.Student">               
+		<property name="sid" value="101"/>
+		<property name="sname" value="Ram"/>
+		<property name="saddr" value="Pune"/>
+	</bean>
+	<!-- 
+	<bean id="studentBean" class="com.app21.beans.Student">               
+		<property name="sid" value="101"/>
+		<property name="sname" value="Ram"/>
+		<property name="saddr" value="Pune"/>
+		<property name="course" ref="courseBean"/>
+	 </bean>
+	 -->
+	
+</beans>	
