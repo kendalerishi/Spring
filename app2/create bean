@@ -7,7 +7,7 @@ change, then set it in xml file as property under .... tag
    <bean id="HelloBean" class="com.secondapp.beans.HelloBean" >
    <property name="name" value="Ram"></property>
    </bean>
-RunApp.java public static void main(String[] args) {
+RunApp.java public static void main(String[] args) { 
 // TODO Auto-generated method stub
 
 	ApplicationContext context = new ClassPathXmlApplicationContext
