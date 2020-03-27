@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
-
+import com.app22.dto.Account;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
 @Repository("accDao")
@@ -125,6 +125,31 @@ public class AccountDaoImpl implements AccountDao {
 			e.printStackTrace();
 			}
 			return status;
+	}
+	
+	@Override
+	public Account getAccount(String accNo) {
+		Account acc=null;
+		try {
+		
+		conn = dataSource.getConnection();
+		ps = conn.prepareStatement("select * from account where accNO = ?");
+		ps.setString(1, accNo);
+		rs = ps.executeQuery();
+		boolean b = rs.next();
+		if(b == true) {
+		acc = new Account();
+		acc.setAccNo(rs.getString("ACCNO"));
+		acc.setAccName(rs.getString("ACCNAME"));
+		acc.setAccType(rs.getString("ACCTYPE"));
+		acc.setBalance(rs.getInt("BALANCE"));
+		}else {
+		acc = null;
+		}
+		} catch (Exception e) {
+		e.printStackTrace();
+		}
+		return acc;
 	}
 
 }

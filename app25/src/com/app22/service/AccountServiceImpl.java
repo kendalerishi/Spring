@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.app22.dao.AccountDao;
+import com.app22.dto.Account;
 
 @Service("accService")
 public class AccountServiceImpl implements AccountService {
@@ -34,7 +35,11 @@ public class AccountServiceImpl implements AccountService {
 		
 		return dao.delete(accNo);
 	}
-	
+	@Override
+	public Account getAccount(String accNo) {
+			
+		return dao.getAccount(accNo);
+	}
 	
 	
 
