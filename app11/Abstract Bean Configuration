@@ -1,0 +1,3 @@
+If we mention abstract="true", then that Bean configuration acts as template.
+No class name required. 
+This does not mean that the class is abstract but Bean configuration is abstract.
