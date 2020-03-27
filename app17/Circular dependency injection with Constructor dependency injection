@@ -1,0 +1,5 @@
+This is not possible with constructor dependency injection. 
+org.springframework.beans.factory.BeanCurrentlyInCreationException:Error creating bean with name 'student': 
+Requested bean is currently in creation: Is there an unresolvable circular reference?
+
+This is because when dependent object is ready then only injection is possible.
