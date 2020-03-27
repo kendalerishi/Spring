@@ -1,0 +1,15 @@
+If we inject dependent values to the Bean object through Constructor then this type of Dependency Injection is called 
+as "Constructor Dependency Injection".
+If we want to use constructor dependency injection in Spring applications , 
+first we have to declare the respective parameterized constructor in the corresponmding bean class then 
+we have to declare that constructor arguments in spring configuration file 
+by using the following tags.
+
+
+<beans>
+<bean ..... >
+<constructor-arg value="--"/>
+<constructor-arg> value </constructor-arg>
+</bean>
+----
+</beans>
