@@ -1,0 +1,6 @@
+This approach can be used for both constructor and setter() dependency injection
+
+c-namespace code --- We can inject primitive, String or single object value. We cannot use Collection types here
+p-namespace-- setter() used here 
+
+Most of the things added to Spring are either to minimize the dependency of xml configuration file or to make it simple.
