@@ -14,3 +14,19 @@ To overcome this use @Qualifier
 If we apply @Autowired to Bean properties then we do not need to create constructor/setter() and getter() methods.S
 
 Using autowiring we are able to get rid of <property> and <constructor-arg> tag.
+
+<context:component-scan base-package="com.app22.dao"/>
+IOC will come across this intimation. Then it will go to the package metioned, scan it where controller, service, 
+repository components are available. Then create dependent objects and inject them.
+
+DtaSource configured inside context file with bean tag since it is predefined datasource. 
+
+@Controller, @Service are used in enterprise applications. Can we prepare our own service class in standalone application.
+
+Test (main class)-- controller component --- it should not talk with DAO directly --- it should comunicate through service
+Service --- will talk to DAO through DAO object
+Controller is dependent on Service --- we are creating obj od service inside Test class. Service depends on DAo.
+Hence DAO must be injected to Service and Service must be injected to Controller.
+
+In Spring MVC predefined controller class we are using.
+
