@@ -10,3 +10,25 @@ Bean life cycle :
 Regular Bean obj creation with application context.
 Here Bean class constructor may be public or default or private. No matter, IOC container will find it  
 since IOC container uses Reflection API.
+
+public void postProcessBeforeInitialization(Object bean, String name) throws BeansException 
+data manipulation, account created or not etc
+public void postProcessAfterInitialization(Object bean, String name) throws BeansException 
+data validation, account ready for transaction or not etc.
+
+Complete lifecycle :- 
+
+Bean class Loading
+Bean Instantiation
+setter()
+beanProcessBeforeInitialization()
+initialization using @PostConstruct
+initialization using InitializingBean afterPropertiesSet()
+initilization using init()
+beanProcessAfterInitialization
+Methods of Application (business flow)
+Destruction using @PreDestroy
+Destruction using DisposableBean
+Destruction using custom method
+Destruction using custom method
+
