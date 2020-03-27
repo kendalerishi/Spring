@@ -1,0 +1,14 @@
+
+Started to create application
+
+AccountDaoImpl dao = (AccountDaoImpl)context.getBean("accDao");
+String status = dao.craete("421", "Shyam", "Savings", 25000);
+
+Not a good coding practice.
+
+AccountService accSer = (AccountService)context.getBean("accService");
+String status= accSer.craeteAccount("421","Shyam", "Current",50000);
+
+xml file
+<context:component-scan base-package="com.app22.dao"/>
+<context:component-scan base-package="com.app22.service"/>
