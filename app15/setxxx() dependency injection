@@ -1,0 +1,6 @@
+setxxx() dependency injection --- already used in all previous applications
+
+New example --- Database connection and database interaction example 
+In Spring applications, if we provide both Setter method dependency injection and 
+Constructor dependency injection to a single bean then , 
+Constructor dependency injection data is overridded by Setter method dependency injection values.
