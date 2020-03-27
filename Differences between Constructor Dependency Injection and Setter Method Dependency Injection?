@@ -1,0 +1,20 @@
+1. In Constructor dependency injection, dependent values injected through a particular constructor. 
+In Setter method dependency injection, dependent values are injected through properties respective setXXX() methods. 
+2.In Constructor Dependency Injection readability is not good , because, in Constructor dependency injection we are unable to identify to which property we are injecting dependent values. 
+In setter method Dependency injection Readability is very good, because, in Setter method Dependency injection we are able to identify that to property we are able to inject the dependent values. 
+3.In Constructor Dependency injection , dependency injection is possible when all dependent objects are getting ready, if dependent objects are not ready then Constructor dependency injection is not possible. 
+In Setter method dependency injection, even though dependent values are not ready, Setter method dependency injection will be performed. 
+4.In case of constructor dependency injection ,partial dependency injection is not possible, because, we have to access the constructor by passing the required no of parameter values. 
+In case of setter method dependency injection, partial dependency injection is possible , because, we are able to access setXXX() method individually. 
+5.IN case of constructor dependency injection, it is not simple to change the values in bean object. 
+In case of Setter method dependency injection , it is very simple to change the values in bean object. 
+6.In Constructor dependency injection, for every change on values a new bean object is created, because, for every change we have to call constructor explicitly. 
+In Setter method dependency injection, for every change on values new object is not created, because, for every change we can access setXXX() method explicitly. 
+7.Constructor dependency injection will make the bean object as "Immutable Object". 
+Setter method dependency injection will make the bean object as "mutable Object". 
+8.If we provide both Constructor and setter method dependency injection to a single bean object then setter method dependency injection overrides constructor dependency injection, but, constructor dependency injection is not overriding setter cmethod dependency injection. 
+9.Constructor dependency injection may provide circular dependency injection. 
+Setter method dependency injection will not provide circular dependency injection. 
+10.Constuctor dependency injection will give guarantee for dependency injection. 
+Setter method dependency injection will not give guarantee for dependency injection. 
+11.In Spring applications, if we have more no of elements to inject then it is suggestible to use Constructor dependency injection instead of setter method dependency injection. 
