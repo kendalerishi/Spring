@@ -24,4 +24,4 @@ configuration
 		</bean>
 </property>
 </Beans>
-id of inner Bean is optional
+id of inner Bean is optional 
