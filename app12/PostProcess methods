@@ -1,0 +1,9 @@
+<context:annotation-config/>  -- to activate annotations
+In case if we are using more than one  PostProcessor classes then we have to implement Ordered interface. 
+Bean obj and Bean name (id) are passed to these methods as an argument
+Define getOrder() which returns int numner ie. order
+Provide config details id and name for both PostProcessor classes in xml file.
+We can write PostProcessor class inside Bean class 
+Also , it will reduce a .class file but it will make the code more complex.
+validation code inside PostProcessAfterInitialization() method only. 
+Because BeforeInitialization()-there is change of overriding data during initialization.
