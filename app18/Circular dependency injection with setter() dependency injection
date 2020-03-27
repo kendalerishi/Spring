@@ -1,0 +1,7 @@
+Circular dependency injection is not possible with constructor dependency injection.  
+It is possible only with setter() dependency injection.
+
+For this we need to use setter() dependency injection
+Here, if dependent object/value is not ready then it will pass null and will complete injection.
+
+
