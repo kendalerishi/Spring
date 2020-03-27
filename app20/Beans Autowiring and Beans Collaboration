@@ -1,0 +1,32 @@
+2 types
+explicit wiring --- using property tags
+autowire --- w/o property tags
+
+app20
+
+This approach is only for Beans injection and not for other data types like primitive or string. We can inject only Bean class objects.
+
+no --- Here we use autowire mode as "no" means we are still keeping property tags as it is. 
+byName --- We remove property tags. Bean class ID value and property name should be same.
+If not, ApplicationContext will create object for Beans we are injecting.
+But it will gice exception while creating object for the Bean where we are injecting them. 
+byType --- Here IOC container will go to the Bean class where we are injecting the Beans. 
+In that class we have used other Bean objects as properties. IOC will check whether the defined Bean type and 
+the Bean type mentioned in Bean configuration in XML file is same or not. IOC verifies the process only using 
+class name property on XML file. 
+But if we have created more than one Bean objects for same Bean in XML file then both Bean objects property 
+might be different but type is same. In that case, we will get exception
+org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.app20.beans.Account' 
+available: expected single matching bean but found 2
+In this case we cannot use constructor in Bean class to be injected.
+
+In case of byName and byType we can provide Bean parameters as primitive, String and Bean objects. 
+This limitation is only for the Bean class in which we are injecting other Beans. 
+But in case of Constructor type autowire mode we have to provide only Bean object in the XML Bean configuration
+of the Bean where we are injecting.
+
+constructor--- In this case we have to use Constructor in Bean to injected. In Bean configuration 
+we can provide only Bean type parameters.
+
+If we apply both explicit and autowire then IOC container will take Explicit wiring.
+
