@@ -7,21 +7,20 @@ import org.springframework.stereotype.Controller;
 import com.app22.dao.AccountDaoImpl;
 import com.app22.service.AccountService;
 
-@Controller("accController")
-public class Test {
+public class TestCreate {
 
 	public static void main(String[] args) {
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		AccountService accSer = (AccountService)context.getBean("accService");
-		String status= accSer.craeteAccount("422","Shyam", "Current",50000);
+		String status= accSer.craeteAccount("424","Gita", "Current",5000);
 //		System.out.println(dao.conn);
 //		System.out.println(status);
-		if(status.contentEquals("Success"))
+		if(status.equals("Success"))
 			System.out.println("Accunt created.");
+		else if(status.equals("Existed"))
+			System.out.println("Account already existed.");
 		else
 			System.out.println("Account not created.");
-
-	}
-
+		}
 }
