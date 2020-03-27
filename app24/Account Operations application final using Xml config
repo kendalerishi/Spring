@@ -1,0 +1,8 @@
+Account Operations application final using Xml config and single Test (controller) class
+Switch case 3 --- Here user will enter account number to be updated. First we need to find whether the account exists or not. 
+If exists, we need to display each account item(name, type etc.) and get new value for each one.
+There is a possibility that user will only press enter(null value) and do not want to change the old value for any of the item.
+To tackle this situation we have to introduce a new getAccount() in DAo class and implement it. This method will create 2 objects: 
+1 with old values and 
+another with new values set by user, Whenever user enters null for any value then we will assign old value to that parameter.
+Once we get a set of parameters to be updated then we will call updateAccount().
