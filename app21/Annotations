@@ -1,0 +1,16 @@
+app21 --- 
+@Require + property tag --- this @Required annotation means dependency injection performed. No need to use Autowire mode. It means injection is mandatory.
+
+@Required + Autowire mode (byType) --- no need to mention property. Autowire will take on the basis of type.
+
+Bean object injection is mandatory. Either by explicit wire (property tag) or Autowire.
+
+@Autowired + @Required --- no need of explicit or autowire. (no property tag and no autowire mode)
+
+@Autowired(required = true) === @Autowired + @Required
+Mandatory  It always follow byType autowire.
+To overcome this use @Qualifier
+
+If we apply @Autowired to Bean properties then we do not need to create constructor/setter() and getter() methods.S
+
+Using autowiring we are able to get rid of <property> and <constructor-arg> tag.
