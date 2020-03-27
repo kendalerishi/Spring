@@ -1,0 +1,8 @@
+In this application we are injecting various value types in bean class. 
+Here we have defined data types as List, Map and Set which are interfaces. 
+We are directly printing their values ie. values of interfaces? 
+
+How is it possible?
+Spring framework internally implements these Interfaces,
+create their objects and return it to application. 
+If we go through Spring framework source code then it will give implementation classes.
