@@ -1,0 +1,3 @@
+Account Operations application using Java based configuration. 
+(Here we can use JDBC/Hibernate template class in place of DAO.) 
+We have replaced Xml file with BeanConfog(AccountConfig) file.
